@@ -152,7 +152,7 @@ ngx_rtmp_auto_push_init_process(ngx_cycle_t *cycle)
     next_delete_stream = ngx_rtmp_delete_stream;
     ngx_rtmp_delete_stream = ngx_rtmp_auto_push_delete_stream;
 
-    reuseaddr = 1;
+    reuseaddr = 0;
     s = (ngx_socket_t) -1;
 
     ngx_log_debug0(NGX_LOG_DEBUG_RTMP, cycle->log, 0,
